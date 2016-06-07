@@ -18,12 +18,12 @@ To install use the latest 'stable' and officially supported version, please use 
 bash <(curl -L -Ss http://sentora.org/install)
 ```
 
-Please report any errors that you may find with the installers to our [bug tracking system](https://github.com/sentora/sentora-installers/issues).
+Please report any errors that you may find with the installers to our [bug tracking system](https://github.com/philippeassis/sentora-installers/issues).
 
 Alternatively (and for testing purposes only) you can install the latest MASTER version like so:
 
 ```
-bash <(curl -L -Ss https://raw.githubusercontent.com/sentora/sentora-installers/master/sentora_install.sh)
+bash <(curl -L -Ss https://raw.githubusercontent.com/philippeassis/sentora-installers/master/sentora_install.sh)
 ```
 Please note that the MASTER branch installer above is ONLY recommended for developers and project staff!
 

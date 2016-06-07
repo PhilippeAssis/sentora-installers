@@ -36,7 +36,7 @@ fi
 
 # FTP Patch
 cd /tmp/
-wget -O hotfix_controller.ext.php "https://raw.githubusercontent.com/sentora/sentora-core/b176df0e29e52e14d778ca6cb47c5765cf3c4953/modules/ftp_management/code/controller.ext.php"
+wget -O hotfix_controller.ext.php "https://raw.githubusercontent.com/philippeassis/sentora-core/b176df0e29e52e14d778ca6cb47c5765cf3c4953/modules/ftp_management/code/controller.ext.php"
 mv /etc/sentora/panel/modules/ftp_management/code/controller.ext.php controller.ext.php_backup
 mv hotfix_controller.ext.php /etc/sentora/panel/modules/ftp_management/code/controller.ext.php
 chown root:root /etc/sentora/panel/modules/ftp_management/code/controller.ext.php
@@ -79,10 +79,10 @@ wget -nv -O suhosin.zip https://github.com/stefanesser/suhosin/archive/$SUHOSIN_
 unzip -q suhosin.zip
 rm -f suhosin.zip
 cd suhosin-$SUHOSIN_VERSION
-phpize 
-./configure 
+phpize
+./configure
 make
-make install 
+make install
 cd ..
 rm -rf suhosin-$SUHOSIN_VERSION
 
@@ -93,7 +93,7 @@ while ! mysql -u root -p$mysqlpassword -e ";" ; do
 read -p "Can't connect to mysql, please give root password or press ctrl-C to abort: " mysqlpassword
 done
 echo -e "Connection mysql ok"
-wget -nv -O  update.sql https://raw.githubusercontent.com/sentora/sentora-installers/master/preconf/sentora-update/1-0-3/sql/update.sql #need url
+wget -nv -O  update.sql https://raw.githubusercontent.com/philippeassis/sentora-installers/master/preconf/sentora-update/1-0-3/sql/update.sql #need url
 mysql -u root -p"$mysqlpassword" < update.sql
 
 echo "We are done system patched updater $SENTORA_UPDATER_VERSION"

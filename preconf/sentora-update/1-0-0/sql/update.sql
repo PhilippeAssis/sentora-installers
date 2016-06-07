@@ -60,13 +60,13 @@ UPDATE  `x_translations` SET `tr_en_tx` = 'Nameserver record. Specifies nameserv
 /* Update for roundcube */
 ALTER TABLE `sentora_roundcube`.`users` CHANGE `preferences` `preferences` longtext;
 
-/* Removal of Perl/CGI support - Issue #47 (https://github.com/sentora/sentora-core/issues/74) */
+/* Removal of Perl/CGI support - Issue #47 (https://github.com/philippeassis/sentora-core/issues/74) */
 ALTER TABLE `x_packages` DROP `pk_enablecgi_in`;
 
-/* Disable user editing of the 'Icons per row' option in the Sentora Config in a bid to phase this out (depricated feature) - Issue #75 (https://github.com/sentora/sentora-core/issues/75) */
+/* Disable user editing of the 'Icons per row' option in the Sentora Config in a bid to phase this out (depricated feature) - Issue #75 (https://github.com/philippeassis/sentora-core/issues/75) */
 UPDATE `x_settings` SET `so_usereditable_en` = 'false' WHERE `so_name_vc` = 'module_icons_pr';
 
-/* Updates the ProFTPd password length - Issue #92 (https://github.com/sentora/sentora-core/issues/92) */
+/* Updates the ProFTPd password length - Issue #92 (https://github.com/philippeassis/sentora-core/issues/92) */
 ALTER TABLE `x_ftpaccounts` MODIFY `ft_user_vc` varchar(50);
 ALTER TABLE `x_ftpaccounts` MODIFY `ft_password_vc` varchar(50);
 USE `sentora_proftpd`; /* We need to make some changes to the ProFTPD DB schema also..*/
